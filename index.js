@@ -18,11 +18,11 @@ handler = async (event, context) => {
     console.log("Connection established")
 
     //Specify the database and collection to be used
-    const db = client.db('akshay');
-    const col = db.collection('dummy');
+    const db = client.db('sample-database');
+    const col = db.collection('sample-collection');
 
     //insert a new document to MongoDB
-    const doc = await col.insertOne({ 'name': 'akshay;' });
+    const doc = await col.insertOne({ 'sample-key': 'sample-value' });
     client.close();
   }
   catch (err) {
