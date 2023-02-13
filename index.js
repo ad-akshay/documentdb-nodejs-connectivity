@@ -12,7 +12,7 @@ handler = async (event, context) => {
       uri,
       {
         useNewUrlParser: true,
-        tlsCAFile: '/var/folders/_c/ryzwzlj907951m04h_zbfd9m0000gn/T/rds-combined-ca-bundle.pem',
+        tlsCAFile: 'rds-combined-ca-bundle.pem',
       }
     );
     console.log("Connection established")
