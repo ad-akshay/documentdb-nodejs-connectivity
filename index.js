@@ -6,7 +6,7 @@ handler = async (event, context) => {
     const password =;
     const host = ;
     const port = ;
-    const uri = `${username}:${password}@${host}:${port}/sample-database/?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false`;
+    const uri = `mongodb://${username}:${password}@${host}:${port}/sample-database?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false`;
     //connect to MongoDB with certificate
     const client = await MongoClient.connect(
       uri,
